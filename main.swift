@@ -64,8 +64,8 @@ let permitirEntrada = false
 print(" ")
  }
 
-let introCodec = true
-let passRetiScam = true
+let introCodec = false
+let passRetiScam = false
 
 //si codigo es true y pass es true puedes pasar
 if introCodec && passRetiScam {
@@ -78,9 +78,16 @@ print(" ")
  print(" ")
 print(" ")
 
-let money = false
-let invitacion = true
+let money = true
+let invitacion = false
 //si tengo money o tengo invitacion puedo entrar
 if money || invitacion {
   print("Bienvenido a la fiesta")
 }else{print("Acceso negado")}
+
+if introCodec && passRetiScam ||
+    money || invitacion{
+    print("Has entrado fg")
+} else{
+    print("Acceso denegado")
+}
